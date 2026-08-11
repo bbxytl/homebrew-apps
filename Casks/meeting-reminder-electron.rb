@@ -1,13 +1,15 @@
 cask "meeting-reminder-electron" do
-  version "0.1.0"
-  sha256 "9b960a08b1a8155930443a5fc21b545c3a17b8e1255aaee15a60b02be618abfb"
+  version "0.1.1"
+  sha256 "239e9e822b7930ccb97431bc8dd81f28c5678906dec571f3079ae3b5ab873532"
 
   url "https://github.com/bbxytl/meeting-reminder-electron/releases/download/v#{version}/MeetingReminder-#{version}-arm64.dmg"
   name "Meeting Reminder"
   desc "macOS 菜单栏会议提醒：全屏遮罩 + 一键加入会议"
   homepage "https://github.com/bbxytl/meeting-reminder-electron"
 
-  depends_on macos: ">= :ventura"
+  # 用符号而非字符串比较：Homebrew 6.0 起
+  # `depends_on macos: ">= :ventura"` 已废弃并会打警告。
+  depends_on macos: :ventura
   depends_on arch: :arm64
 
   app "MeetingReminder.app"
