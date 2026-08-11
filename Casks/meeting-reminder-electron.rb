@@ -1,6 +1,6 @@
 cask "meeting-reminder-electron" do
   version "0.1.0"
-  sha256 "35218d86b5c07b455cdb922ac4ba63fdfc3e971c5322179ba93f6006ed0b3d24"
+  sha256 "5ae84e3d43f9b34aef0014c30a01b797896896cda499159ec0713f2ccd38662d"
 
   url "https://github.com/bbxytl/meeting-reminder-electron/releases/download/v#{version}/MeetingReminder-#{version}-arm64.dmg"
   name "Meeting Reminder"
